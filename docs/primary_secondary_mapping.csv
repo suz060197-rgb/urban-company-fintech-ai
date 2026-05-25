@@ -1,0 +1,35 @@
+primary_response_variable,source_primary_field,synthetic_dataset,synthetic_variable,mapping_type,compatibility_score,notes,compatibility_band,primary_column_present
+business_type,business_type_raw,merchants.csv,category,Direct categorical proxy,1.0,Service category normalized from survey business type.,High,True
+city,city,merchants.csv,city,Direct categorical match,1.0,Cleaned city labels can be compared with synthetic city distribution.,High,True
+region,city,merchants.csv,region,Derived categorical match,1.0,Survey region is derived from city and maps to synthetic region.,High,True
+tenure_days_estimate,experience_years,merchants.csv,tenure_days,Numeric midpoint proxy,0.9,Experience years converted to days; close proxy for platform tenure.,High,True
+monthly_income_midpoint,monthly_income_range_raw,merchants.csv,monthly_income,Numeric midpoint proxy,0.9,Income range converted to midpoint rupee estimate.,High,True
+monthly_income_midpoint,monthly_income_range_raw,provider_kpis.csv,monthly_profit,Loose numeric proxy,0.45,Survey income is gross-like; synthetic monthly_profit is modeled net profit.,Low,True
+monthly_transaction_estimate,monthly_transaction_volume_raw,merchants.csv,transaction_velocity,Numeric midpoint proxy,0.9,Booking range converted to midpoint monthly transaction estimate.,High,True
+uses_upi_flag,payment_methods_standardized,merchants.csv,payment_success_rate,Directional component proxy,0.55,UPI use supports digital payment reliability but is not itself success rate.,Low,True
+uses_cash_flag,payment_methods_standardized,merchants.csv,payment_success_rate,Inverse directional proxy,0.4,Cash use can be compared directionally with digital payment adoption.,Low,True
+upi_usage_frequency_scaled,upi_usage_frequency_raw,merchants.csv,payment_success_rate,Frequency-to-score proxy,0.65,Daily UPI use provides a soft validation of payment reliability assumptions.,Medium,True
+digital_adoption_score_scaled,Digital_Adoption_Score,merchants.csv,digital_tool_usage,Scaled Likert proxy,0.85,Direct survey score for digital adoption.,High,True
+digital_adoption_score_scaled,Digital_Adoption_Score,provider_kpis.csv,technology_adoption_score,Composite component proxy,0.8,"Maps well to technology adoption score, though synthetic score includes payment success.",High,True
+cashflow_issues_scaled,Cashflow_Issues,payouts_loans.csv,working_capital_gap,Scaled Likert proxy,0.75,Cashflow issue severity validates working-capital pressure.,Medium,True
+settlement_delay_impact_scaled,Settlement_Delay_Impact,payouts_loans.csv,payout_delay_days,Impact proxy,0.65,Survey measures impact of delay rather than exact delay days.,Medium,True
+settlement_delay_impact_scaled,Settlement_Delay_Impact,payouts_loans.csv,working_capital_gap,Impact proxy,0.65,Higher delay impact should align with higher liquidity pressure.,Medium,True
+faster_payout_impact_scaled,Faster_Payout_Impact,payouts_loans.csv,payout_delay_days,Inverse impact proxy,0.6,Measures benefit from faster payouts rather than actual delay.,Medium,True
+faster_payout_impact_scaled,Faster_Payout_Impact,provider_kpis.csv,advancement_score,Mechanism proxy,0.65,Validates payout-to-advancement causal mechanism.,Medium,True
+needed_business_credit_binary,Needed_Business_Credit,payouts_loans.csv,loan_offer_flag,Binary demand/offer proxy,0.6,"Survey records credit need, not necessarily observed offer.",Medium,True
+needed_business_credit_binary,Needed_Business_Credit,payouts_loans.csv,working_capital_gap,Binary liquidity proxy,0.7,Credit need is a strong directional proxy for working-capital gap.,Medium,True
+approx_credit_amount_numeric,approx_credit_amount_raw,payouts_loans.csv,loan_amount,Numeric proxy,0.8,Credit amount can be compared with synthetic loan amount when credit was needed.,High,True
+credit_purpose,Credit_Purpose,payouts_loans.csv,loan_status,Context-only proxy,0.25,Credit purpose helps interpret loan usage but does not map to lifecycle status.,Context only,True
+business_growth_after_digital_scaled,Business_Growth_After_Digital,provider_kpis.csv,income_growth_pct,Scaled Likert proxy,0.65,Perceived growth validates direction of income growth.,Medium,True
+business_growth_after_digital_scaled,Business_Growth_After_Digital,provider_kpis.csv,advancement_score,Composite proxy,0.75,Good directional match to advancement score.,Medium,True
+repeat_customer_change_scaled,Repeat_Customer_Change,merchants.csv,repeat_customer_rate,Scaled Likert proxy,0.8,Repeat-customer change validates repeat-customer assumptions.,High,True
+repeat_customer_change_scaled,Repeat_Customer_Change,provider_kpis.csv,lock_in_score,Composite component proxy,0.75,Repeat-customer improvement is a lock-in component.,Medium,True
+ai_tool_usage_binary,AI_Tool_Usage,merchants.csv,agent_usage_flag,Direct binary proxy,0.9,Yes/No AI usage maps directly to agent usage flag.,High,True
+ai_tool_usage_binary,AI_Tool_Usage,merchants.csv,ai_adoption_score,Binary component proxy,0.75,Binary use validates direction of synthetic AI adoption score.,Medium,True
+ai_tool_usage_binary,AI_Tool_Usage,provider_kpis.csv,forecast_usage,Binary proxy,0.7,AI use partially validates forecast usage.,Medium,True
+ai_tool_usage_binary,AI_Tool_Usage,provider_kpis.csv,agentic_intelligence_score,Composite component proxy,0.75,AI use is a key component of agentic intelligence.,Medium,True
+automation_usage,Automation_Usage,merchants.csv,digital_tool_usage,Categorical component proxy,0.65,Automation use indicates digital tool adoption.,Medium,True
+automation_usage,Automation_Usage,provider_kpis.csv,technology_adoption_score,Categorical component proxy,0.6,Automation use supports technology dimension validation.,Medium,True
+platform_used_raw,Platform_Used,merchants.csv,multi_product_adoption,Product-count proxy,0.55,Platform/payment app mentions can approximate multi-product adoption.,Low,True
+key_pain_points,Key_Pain_Points,payouts_loans.csv,working_capital_gap,Qualitative support proxy,0.45,Pain points support interpretation but are not direct numeric measures.,Low,True
+has_interview_quote,Interview_Quote,provider_kpis.csv,advancement_score,Qualitative evidence flag,0.25,"Quote availability supports interpretation, not measurement.",Context only,True

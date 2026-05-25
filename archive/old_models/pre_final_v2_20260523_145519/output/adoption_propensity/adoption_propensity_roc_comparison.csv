@@ -1,0 +1,4 @@
+model_version,roc_auc
+original_adoption_model,0.604710701484895
+leaky_engineered_retrain,0.998781976613951
+pre_intervention_propensity,0.6634416924664602

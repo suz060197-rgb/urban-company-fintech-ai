@@ -1,0 +1,13 @@
+model,feature,coefficient,importance
+loan_default_prediction,loan_disbursal_time,0.14304133353739334,0.14304133353739334
+loan_default_prediction,city_Hyderabad,0.12107087986768969,0.12107087986768969
+loan_default_prediction,treatment_flag,0.10548158839922474,0.10548158839922474
+loan_default_prediction,city_Bhubaneswar,-0.1026432961815704,0.1026432961815704
+loan_default_prediction,avg_ticket,-0.09857446483009927,0.09857446483009927
+loan_default_prediction,repayment_amount,-0.0861105411104893,0.0861105411104893
+loan_default_prediction,city_Delhi NCR,0.07439997475481276,0.07439997475481276
+loan_default_prediction,city_Chandigarh,-0.0680609178261506,0.0680609178261506
+loan_default_prediction,transaction_velocity,0.0676986898468991,0.0676986898468991
+loan_default_prediction,post_treatment_flag,-0.0630382431913106,0.0630382431913106
+loan_default_prediction,city_Ahmedabad,-0.0622386941550518,0.0622386941550518
+loan_default_prediction,working_capital_gap,0.060414109831548345,0.060414109831548345

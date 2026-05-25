@@ -1,0 +1,31 @@
+respondent_id,data_type,interview_quote,key_pain_points
+R0001,interview,"“When payments get delayed, I struggle to buy supplies.”","delayed settlements, cancellation losses"
+R0002,survey,“Faster payouts help me accept more bookings.”,cancellation losses
+R0003,survey,“Cash helps me manage urgent repairs when UPI payouts are late.”,"payment delays, tool financing issues"
+R0004,survey,“Digital helps but clients still prefer calling directly.”,low demand consistency
+R0005,survey,"“Cash is safer for me, UPI delays affect rent payments.”",high cancellations
+R0006,interview,"“When payments get delayed, I struggle to buy supplies.”",delayed settlements
+R0007,interview,“Credit helps me expand services faster.”,short-term credit gaps
+R0008,interview,“Credit is essential for salon upgrades.”,payout delays
+R0009,survey,"“AI helps me track jobs, but cash is still king.”","tool financing, payout delays"
+R0010,survey,“Cash helps me buy wires immediately.”,payment delays
+R0011,survey,“UPI is good but cash is faster.”,delayed payouts
+R0012,survey,“Credit helps me accept bigger jobs.”,tool financing
+R0013,survey,“Cash is easier for small repairs.”,high cancellations
+R0014,survey,“UPI delays make me prefer cash.”,payment delays
+R0015,interview,“Credit is essential for salon upgrades.”,"high rent, payout delays"
+R0016,interview,“Cash helps me pay staff on time.”,delayed settlements
+R0017,interview,“Credit helps me buy supplies in bulk.”,stock shortages
+R0018,interview,“Credit is essential for salon upgrades.”,"high rent, payout delays"
+R0019,interview,“Cash helps me pay staff on time.”,delayed settlements
+R0020,interview,“Credit is essential for salon upgrades.”,high cancellations
+R0021,interview,“Cash helps me buy supplies quickly.”,stock shortages
+R0022,interview,“Credit lets me upgrade my salon tools.”,delayed settlements
+R0023,interview,“Cash helps me pay staff on time.”,high cancellations
+R0024,interview,“Credit is essential for salon upgrades.”,payout delays
+R0025,interview,“Credit helps me expand services faster.”,short-term credit gaps
+R0026,interview,“Cash helps me buy supplies quickly.”,stock shortages
+R0027,interview,“Cash helps me pay staff on time.”,delayed settlements
+R0028,interview,“Cash helps me buy paint immediately.”,payment delays
+R0029,interview,“Credit helps me accept bigger jobs.”,tool financing
+R0030,interview,“Digital helps me manage repeat clients better.”,high cancellations

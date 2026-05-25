@@ -1,0 +1,61 @@
+dataset,column_name,delta_dimension,source_type,description
+merchants.csv,merchant_id,Data,synthetic,Stable synthetic provider identifier.
+merchants.csv,region,Data,public,Indian macro-region used for geographic calibration.
+merchants.csv,city,Data,public,Provider operating city.
+merchants.csv,category,Data,public,"Service category such as beauty, repairs, cleaning, or appliance services."
+merchants.csv,tenure_days,Data,synthetic,Days since provider joined the platform at the start of the panel.
+merchants.csv,avg_ticket,Data,synthetic,Typical customer order value in Indian rupees.
+merchants.csv,monthly_income,Data,synthetic,Baseline monthly gross provider income in Indian rupees.
+merchants.csv,repeat_customer_rate,Lock-in,synthetic,"Share of customers expected to return, bounded between 0 and 1."
+merchants.csv,platform_commission_pct,Embedded Finance,public,"Platform commission rate charged to the provider, expressed as 0 to 1."
+merchants.csv,kyc_flag,Embedded Finance,synthetic,Whether provider passed KYC checks required for embedded finance.
+merchants.csv,treatment_flag,Embedded Finance,assigned,Whether provider is assigned to embedded finance access.
+merchants.csv,treatment_start_month,Embedded Finance,assigned,First panel month with embedded finance access; 0 indicates never treated.
+merchants.csv,intervention_timestamp,Embedded Finance,assigned,Calendar timestamp when embedded finance access begins; blank for never-treated providers.
+merchants.csv,payment_success_rate,Data,derived,"Provider-level expected digital payment success rate, bounded between 0 and 1."
+merchants.csv,transaction_velocity,Data,derived,Expected monthly transaction throughput for the provider.
+merchants.csv,multi_product_adoption,Embedded Finance,derived,Count of embedded-finance and digital products adopted by the provider.
+merchants.csv,digital_tool_usage,Technology,derived,"Provider use of platform digital tools, bounded between 0 and 1."
+merchants.csv,ai_adoption_score,Agentic Intelligence,derived,"Provider adoption of AI-assisted workflows, bounded between 0 and 1."
+merchants.csv,agent_usage_flag,Agentic Intelligence,derived,"Whether provider uses agentic AI assistance for planning, support, or forecasts."
+transactions.csv,transaction_id,Data,synthetic,Stable synthetic transaction identifier.
+transactions.csv,merchant_id,Data,synthetic,Foreign key to merchants.csv.
+transactions.csv,timestamp,Data,synthetic,Transaction timestamp within the simulated study window.
+transactions.csv,amount,Data,synthetic,Customer payment amount in Indian rupees.
+transactions.csv,customer_rating,Data,synthetic,Post-service customer rating on a 1 to 5 scale.
+transactions.csv,payment_method,Embedded Finance,public,"Payment rail such as UPI, card, wallet, netbanking, or cash."
+transactions.csv,cancellation_flag,Data,synthetic,Whether the booking was cancelled after being created.
+transactions.csv,tip_amount,Data,synthetic,Customer tip amount in Indian rupees.
+transactions.csv,treatment_active,Embedded Finance,assigned,Whether embedded finance was active for the provider at transaction time.
+transactions.csv,settlement_delay,Embedded Finance,derived,Estimated transaction settlement delay in days.
+transactions.csv,service_completion_rate,Advancement,derived,"Transaction-level expected service completion probability, bounded between 0 and 1."
+payouts_loans.csv,merchant_id,Data,synthetic,Foreign key to merchants.csv.
+payouts_loans.csv,month,Data,synthetic,Provider panel month.
+payouts_loans.csv,payout_amount,Embedded Finance,synthetic,Provider payout amount after commission and cancellations.
+payouts_loans.csv,payout_delay_days,Embedded Finance,synthetic,Estimated delay between service completion and provider payout; NaN when provider-month is inactive after churn.
+payouts_loans.csv,active_provider_month_flag,Data,derived,Whether provider was active and eligible for payout activity in the provider-month.
+payouts_loans.csv,loan_offer_flag,Embedded Finance,synthetic,Whether the provider received a working-capital loan offer.
+payouts_loans.csv,loan_amount,Embedded Finance,synthetic,Working-capital principal offered or disbursed in Indian rupees.
+payouts_loans.csv,loan_status,Embedded Finance,synthetic,"Loan state: not_offered, declined, active, repaid, or defaulted."
+payouts_loans.csv,repayment_amount,Embedded Finance,synthetic,Loan repayment amount collected in Indian rupees.
+payouts_loans.csv,working_capital_gap,Embedded Finance,derived,Estimated monthly liquidity shortfall before financing in Indian rupees.
+payouts_loans.csv,loan_disbursal_time,Embedded Finance,derived,Estimated loan disbursal time in days; zero when no loan is accepted.
+payouts_loans.csv,default_flag,Embedded Finance,derived,Whether the monthly loan outcome defaulted.
+provider_kpis.csv,merchant_id,Data,synthetic,Foreign key to merchants.csv.
+provider_kpis.csv,month,Data,synthetic,Provider panel month.
+provider_kpis.csv,income_growth_pct,Advancement,synthetic,Monthly income growth relative to baseline income.
+provider_kpis.csv,monthly_profit,Advancement,synthetic,"Estimated monthly provider profit after commission, financing, and operating costs."
+provider_kpis.csv,retention_flag,Lock-in,synthetic,Whether the provider remains active in the month.
+provider_kpis.csv,churn_probability,Lock-in,synthetic,"Model-implied provider churn probability, bounded between 0 and 1."
+provider_kpis.csv,treatment_flag,Embedded Finance,assigned,Whether provider is assigned to embedded finance access.
+provider_kpis.csv,post_treatment_flag,Embedded Finance,assigned,Whether provider-month occurs after embedded finance access begins.
+provider_kpis.csv,lock_in_score,Lock-in,derived,"Provider platform lock-in score based on retention, repeat customers, and product adoption."
+provider_kpis.csv,technology_adoption_score,Technology,derived,Provider technology adoption score based on digital tools and payment success.
+provider_kpis.csv,advancement_score,Advancement,derived,"Provider advancement score based on income growth, profit, and retention."
+provider_kpis.csv,agentic_intelligence_score,Agentic Intelligence,derived,Provider score for AI and agentic workflow adoption.
+provider_kpis.csv,forecast_usage,Agentic Intelligence,derived,"Whether provider uses AI forecasts for demand, cash flow, or loan planning."
+provenance.csv,dataset,Data,metadata,Generated CSV file name.
+provenance.csv,column_name,Data,metadata,Column name in the generated dataset.
+provenance.csv,delta_dimension,Data,metadata,DELTA framework dimension represented by the column.
+provenance.csv,source_type,Data,metadata,"Whether the value is synthetic, derived, assigned, or metadata."
+provenance.csv,description,Data,metadata,Research interpretation of the column.

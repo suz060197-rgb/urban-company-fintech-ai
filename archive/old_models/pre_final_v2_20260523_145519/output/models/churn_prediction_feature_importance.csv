@@ -1,0 +1,13 @@
+model,feature,coefficient,importance
+churn_prediction,payout_delay_days,-1.0837686098461397,1.0837686098461397
+churn_prediction,forecast_usage,-0.4713043624401802,0.4713043624401802
+churn_prediction,agentic_intelligence_score,0.3907865861610238,0.3907865861610238
+churn_prediction,post_treatment_flag,-0.3044367172118861,0.3044367172118861
+churn_prediction,working_capital_gap,-0.2906472144203218,0.2906472144203218
+churn_prediction,technology_adoption_score,-0.27324891362778947,0.27324891362778947
+churn_prediction,treatment_flag,-0.24280009880323197,0.24280009880323197
+churn_prediction,loan_offer_flag,-0.16953557811599465,0.16953557811599465
+churn_prediction,loan_status_not_offered,0.1695355781159946,0.1695355781159946
+churn_prediction,digital_tool_usage,0.11183097084605227,0.11183097084605227
+churn_prediction,repeat_customer_rate,-0.11129244790683437,0.11129244790683437
+churn_prediction,loan_status_active,-0.10721655587505984,0.10721655587505984

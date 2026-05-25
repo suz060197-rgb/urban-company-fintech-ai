@@ -1,0 +1,11 @@
+feature,leakage_rating,coefficient,importance,correlation_with_target,rationale
+repayment_ratio,Critical,0.6530532590487766,0.6530532590487766,0.1093818132172697,Not available at loan origination; depends on repayment behavior that occurs after loan disbursal and close to default outcome.
+repayment_gap_ratio,Critical,1.066958924130714,1.066958924130714,0.1819365724967906,Derived from repayment ratio and current loan amount; directly reflects repayment shortfall after origination.
+prior_default_count,Low,-0.0398095037666016,0.0398095037666016,-0.0012109562566712,Valid at origination if based only on historical defaults before the current loan/month.
+prior_default_flag,Low,-0.0071844930394316,0.0071844930394316,-0.0006373756588477,Valid at origination if based only on historical default count before the current loan/month.
+credit_dependency_score,Low-Medium,-0.0739511903603149,0.0739511903603149,-0.0138815958861591,"Mostly lagged/ex-ante stress signal if built from lagged loan amount, lagged gap, lagged delay, and rolling volatility."
+loan_to_payout_ratio,Medium-High,0.2836642560584221,0.2836642560584221,0.1963292966048669,"Uses same-cycle loan amount and payout amount; may be known only after payout cycle, not necessarily at origination."
+loan_to_income_ratio,Medium,0.3090665319431521,0.3090665319431521,0.1910235660178496,Loan amount may be known at origination and income baseline is known; acceptable if loan amount is requested/approved amount before disbursal.
+payout_volatility_rolling3,Low,-0.0738116695515897,0.0738116695515897,-0.0037882463834877,Valid if computed from prior rolling payout history only.
+working_capital_gap_lag1,Low,-0.0722609391019295,0.0722609391019295,-0.0064702151521428,Valid because it is explicitly lagged one provider-month.
+digital_readiness,Low,-0.0736133831303194,0.0736133831303194,0.0052780875607539,Baseline/provider readiness feature available before loan origination.

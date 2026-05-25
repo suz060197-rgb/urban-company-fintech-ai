@@ -1,0 +1,3 @@
+model,roc_auc,features,action,missing_requested_features_in_current_model
+previous_adoption_model,0.6119952915376677,37,baseline retained unless beaten,"settlement_delay_days, UPI_usage_frequency, digital_adoption_score, needed_business_credit_binary, cashflow_issue, loan_history, repeat_customer_change, business_growth_after_digital"
+engineered_adoption_model,0.9633885923704277,45,final model already current or stronger,"settlement_delay_days, UPI_usage_frequency, digital_adoption_score, needed_business_credit_binary, cashflow_issue, loan_history, repeat_customer_change, business_growth_after_digital"

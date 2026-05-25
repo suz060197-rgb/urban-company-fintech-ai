@@ -1,0 +1,5 @@
+actual,predicted,count
+Negative,Negative,2987
+Negative,Positive,277
+Positive,Negative,437
+Positive,Positive,2299

@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+
+archive/
+output/experiments/
+output/models_old/
+
+*.pbix

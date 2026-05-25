@@ -1,0 +1,4 @@
+model_version,roc_auc,precision,recall,notes
+old_baseline,0.6829702555509007,0.108695652173913,0.2272727272727272,Original default model.
+leaky_monitoring_model,0.9372831474597274,0.0653266331658291,0.5416666666666666,High leakage risk from repayment-derived features.
+leakage_safe_revision,0.9257899628252788,0.05363984674329502,0.5833333333333334,Repayment features removed; loan burden uses prior payout history.

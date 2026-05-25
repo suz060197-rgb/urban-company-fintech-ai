@@ -1,0 +1,7 @@
+{
+  "name": "Future_Ready_Corporate",
+  "dataColors": ["#00AACC", "#FF6600", "#00AA44", "#CCCCCC"],
+  "background": "#121212",
+  "foreground": "#E0E0E0",
+  "tableAccent": "#00AACC"
+}

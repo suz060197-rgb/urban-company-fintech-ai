@@ -1,0 +1,49 @@
+model,rank,feature,coefficient,importance,interpretation
+churn_prediction,1,payout_delay_days,-1.0837686098461397,1.0837686098461397,Same-month payout timing is the dominant churn driver but is potential leakage for pre-month forecasting.
+churn_prediction,2,forecast_usage,-0.4713043624401802,0.4713043624401802,Forecast users appear less likely to churn; could proxy agentic planning maturity.
+churn_prediction,3,agentic_intelligence_score,0.3907865861610238,0.3907865861610238,Positive sign is counterintuitive and may reflect correlation with treated/high-activity providers.
+churn_prediction,4,post_treatment_flag,-0.3044367172118861,0.3044367172118861,Post-treatment status reduces churn risk and reflects embedded-finance exposure.
+churn_prediction,5,working_capital_gap,-0.2906472144203218,0.2906472144203218,Current liquidity gap is influential but same-period and should be lagged for prediction.
+churn_prediction,6,technology_adoption_score,-0.27324891362778947,0.27324891362778947,Higher technology adoption is associated with lower churn.
+churn_prediction,7,treatment_flag,-0.24280009880323197,0.24280009880323197,Treatment assignment lowers churn risk in the synthetic mechanism.
+churn_prediction,8,loan_offer_flag,-0.16953557811599465,0.16953557811599465,Current loan offer status may proxy liquidity access but is same-period.
+churn_prediction,9,loan_status_not_offered,0.1695355781159946,0.1695355781159946,No loan offer is associated with higher churn risk.
+churn_prediction,10,digital_tool_usage,0.11183097084605227,0.11183097084605227,Positive sign should be investigated; may be confounded by activity/adoption.
+churn_prediction,11,repeat_customer_rate,-0.11129244790683437,0.11129244790683437,Repeat customers reduce churn risk as expected.
+churn_prediction,12,loan_status_active,-0.10721655587505984,0.10721655587505984,Active financing access is associated with lower churn.
+loan_default_prediction,1,loan_disbursal_time,0.14304133353739334,0.14304133353739334,Longer disbursal time is associated with higher default risk.
+loan_default_prediction,2,city_Hyderabad,0.12107087986768969,0.12107087986768969,City effect; may reflect synthetic regional heterogeneity rather than causal risk.
+loan_default_prediction,3,treatment_flag,0.10548158839922474,0.10548158839922474,Treatment indicator appears predictive but may proxy loan availability and selection.
+loan_default_prediction,4,city_Bhubaneswar,-0.1026432961815704,0.1026432961815704,City effect; should not be overinterpreted without calibration.
+loan_default_prediction,5,avg_ticket,-0.09857446483009927,0.09857446483009927,Higher ticket providers appear lower risk.
+loan_default_prediction,6,repayment_amount,-0.0861105411104893,0.0861105411104893,Repayment amount is post-outcome leakage for default prediction.
+loan_default_prediction,7,city_Delhi NCR,0.07439997475481276,0.07439997475481276,City effect; likely synthetic geography signal.
+loan_default_prediction,8,city_Chandigarh,-0.0680609178261506,0.0680609178261506,City effect; likely synthetic geography signal.
+loan_default_prediction,9,transaction_velocity,0.0676986898468991,0.0676986898468991,Higher activity may increase credit exposure.
+loan_default_prediction,10,post_treatment_flag,-0.0630382431913106,0.0630382431913106,Post-treatment state is associated with lower default risk.
+loan_default_prediction,11,city_Ahmedabad,-0.0622386941550518,0.0622386941550518,City effect; likely synthetic geography signal.
+loan_default_prediction,12,working_capital_gap,0.060414109831548345,0.060414109831548345,Liquidity shortfall raises default risk but should be measured before disbursal.
+income_growth_prediction,1,payout_amount,0.212026437048947,0.212026437048947,Direct leakage because income growth is derived from payout relative to baseline.
+income_growth_prediction,2,monthly_income,-0.11026193846549513,0.11026193846549513,Baseline income mechanically affects percentage growth.
+income_growth_prediction,3,active_provider_month_flag,0.09929187704572859,0.09929187704572859,Inactive months imply collapsed income; useful descriptively but post-outcome for forecasting.
+income_growth_prediction,4,lock_in_score,0.0667233125219671,0.0667233125219671,Composite score partly reflects retention/outcome state and should be lagged.
+income_growth_prediction,5,working_capital_gap,-0.04785536254890426,0.04785536254890426,Liquidity shortfall is associated with weaker income growth.
+income_growth_prediction,6,avg_ticket,-0.0349509494970347,0.0349509494970347,Higher ticket providers have lower percent growth in this model.
+income_growth_prediction,7,transaction_velocity,-0.02316605306584689,0.02316605306584689,Throughput signal has small negative coefficient after payout and baseline controls.
+income_growth_prediction,8,post_treatment_flag,-0.023013812310617433,0.023013812310617433,Unexpected sign after payout controls; likely mediated away by same-month payout.
+income_growth_prediction,9,multi_product_adoption,-0.013890972616577313,0.013890972616577313,Small product-adoption signal.
+income_growth_prediction,10,platform_commission_pct,-0.013415725500957876,0.013415725500957876,Higher commission modestly reduces growth.
+income_growth_prediction,11,technology_adoption_score,0.013370849036868915,0.013370849036868915,Technology score has small positive relationship.
+income_growth_prediction,12,digital_tool_usage,-0.011213383739852478,0.011213383739852478,Small and counterintuitive after composite controls.
+embedded_finance_adoption,1,kyc_flag,0.7553642473119329,0.7553642473119329,KYC eligibility is the main adoption/assignment driver.
+embedded_finance_adoption,2,city_Hyderabad,-0.13763527253130378,0.13763527253130378,City signal reflects phased rollout geography.
+embedded_finance_adoption,3,multi_product_adoption,0.12736545529263843,0.12736545529263843,Product adoption predicts embedded-finance treatment but may be post-assignment leakage.
+embedded_finance_adoption,4,city_Surat,0.1189111466101739,0.1189111466101739,City signal reflects rollout/geographic heterogeneity.
+embedded_finance_adoption,5,city_Ahmedabad,-0.1129124581522479,0.1129124581522479,City signal reflects rollout/geographic heterogeneity.
+embedded_finance_adoption,6,category_home_cleaning,0.10466841052266845,0.10466841052266845,Category signal reflects rollout/category prioritization.
+embedded_finance_adoption,7,agent_usage_flag,-0.09811280711198359,0.09811280711198359,Agent usage may be contemporaneous; use pre-rollout agent readiness if forecasting adoption.
+embedded_finance_adoption,8,monthly_income,-0.09365961013881163,0.09365961013881163,Baseline income contributes modestly.
+embedded_finance_adoption,9,avg_ticket,-0.08722203589855622,0.08722203589855622,Ticket size contributes modestly.
+embedded_finance_adoption,10,city_Kolkata,-0.08457730335115461,0.08457730335115461,City signal reflects rollout/geographic heterogeneity.
+embedded_finance_adoption,11,city_Guwahati,0.0790891832526005,0.0790891832526005,City signal reflects rollout/geographic heterogeneity.
+embedded_finance_adoption,12,category_appliance_repair,-0.06987893039949163,0.06987893039949163,Category signal reflects rollout/category prioritization.

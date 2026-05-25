@@ -1,0 +1,189 @@
+Urban Company Embedded Finance Synthetic Dataset Validation Report
+Data directory: D:\Project Files\urban_company_fintech_mba\data
+
+ROW COUNTS
+- merchants: 1,000
+- transactions: 403,539
+- payouts_loans: 12,000
+- provider_kpis: 12,000
+- provenance: 60
+SCHEMA CHECKS
+- merchants.csv: PASS; rows=1,000; missing=none; extra=none, duplicate merchant_id rows=0
+- transactions.csv: PASS; rows=403,539; missing=none; extra=none, duplicate transaction_id rows=0
+- payouts_loans.csv: PASS; rows=12,000; missing=none; extra=none
+- provider_kpis.csv: PASS; rows=12,000; missing=none; extra=none
+- provenance.csv: PASS; rows=60; missing=none; extra=none
+Overall schema status: PASS
+
+DISTRIBUTION CHECKS
+                             check  share_valid status
+               avg_ticket_positive          1.0   PASS
+           monthly_income_positive          1.0   PASS
+                repeat_rate_in_0_1          1.0   PASS
+                 commission_in_0_1          1.0   PASS
+       payment_success_rate_in_0_1          1.0   PASS
+         digital_tool_usage_in_0_1          1.0   PASS
+          ai_adoption_score_in_0_1          1.0   PASS
+     transaction_velocity_positive          1.0   PASS
+       transaction_amount_positive          1.0   PASS
+                     rating_in_1_5          1.0   PASS
+                   tip_nonnegative          1.0   PASS
+      settlement_delay_nonnegative          1.0   PASS
+    service_completion_rate_in_0_1          1.0   PASS
+                payout_nonnegative          1.0   PASS
+active_provider_month_flag_present          1.0   PASS
+  payout_delay_present_when_active          1.0   PASS
+    payout_delay_nan_when_inactive          1.0   PASS
+   active_payout_delay_nonnegative          1.0   PASS
+                  loan_nonnegative          1.0   PASS
+   working_capital_gap_nonnegative          1.0   PASS
+   loan_disbursal_time_nonnegative          1.0   PASS
+          churn_probability_in_0_1          1.0   PASS
+              lock_in_score_in_0_1          1.0   PASS
+  technology_adoption_score_in_0_1          1.0   PASS
+          advancement_score_in_0_1          1.0   PASS
+ agentic_intelligence_score_in_0_1          1.0   PASS
+
+KEY DISTRIBUTION SUMMARY
+                    metric      mean       p05       p95
+                avg_ticket  1108.158   539.400  1909.497
+            monthly_income 39082.460 12385.054 81184.063
+        transaction_amount  1158.527   497.530  2150.221
+           customer_rating     4.352     3.670     5.000
+             payout_amount 28885.076     0.000 64345.515
+            monthly_profit 14125.709     0.000 31182.499
+         income_growth_pct    -0.266    -1.000     0.071
+      payment_success_rate     0.955     0.914     0.996
+        digital_tool_usage     0.674     0.412     0.927
+         ai_adoption_score     0.531     0.295     0.754
+          settlement_delay     1.539     0.145     3.116
+   service_completion_rate     0.954     0.931     0.978
+       working_capital_gap  2025.806     0.000  7684.134
+       loan_disbursal_time     0.201     0.000     1.593
+             lock_in_score     0.588     0.000     0.817
+ technology_adoption_score     0.712     0.517     0.893
+         advancement_score     0.493     0.000     0.688
+agentic_intelligence_score     0.469     0.176     0.832
+
+BALANCE TABLE
+Treatment providers=456; control providers=544; status=PASS
+              covariate  treated_mean  control_mean  std_mean_diff  p_value
+            tenure_days      544.2610      540.5790         0.0104   0.8703
+             avg_ticket     1101.0701     1114.0997        -0.0311   0.6249
+         monthly_income    38647.6805    39446.9076        -0.0378   0.5522
+   repeat_customer_rate        0.4421        0.4381         0.0366   0.5636
+platform_commission_pct        0.2188        0.2209        -0.0596   0.3472
+   payment_success_rate        0.9564        0.9545         0.0763   0.2299
+     digital_tool_usage        0.6908        0.6607         0.1951   0.0022
+      ai_adoption_score        0.5398        0.5239         0.1144   0.0721
+
+TREATMENT VS CONTROL COMPARISON
+ treatment_flag  post_treatment_flag  rows  income_growth_pct  monthly_profit  retention_rate  churn_probability  payout_delay_days  active_provider_month_rate  loan_offer_rate  working_capital_gap  default_rate  lock_in_score  technology_adoption_score  advancement_score  agentic_intelligence_score
+          False                False  6528            -0.2867      13744.5619          0.8775             0.1221             5.2477                      0.8958           0.2203            2817.3978        0.0058         0.5356                     0.7019             0.4797                      0.4633
+           True                False  1821            -0.2413      13674.5908          0.9314             0.0692             5.2407                      0.9511           0.2422            2771.3137        0.0093         0.5751                     0.7204             0.5119                      0.4661
+           True                 True  3651            -0.2404      15032.2047          0.8869             0.1132             1.1476                      0.8965           0.4947             238.6020        0.0107         0.6873                     0.7257             0.5062                      0.4796
+
+POST-TREATMENT OUTCOME CONTRASTS
+                   outcome  treated_post_mean  control_mean  difference  p_value
+         income_growth_pct            -0.2404       -0.2867      0.0463   0.0000
+            monthly_profit         15032.2047    13744.5619   1287.6428   0.0000
+         churn_probability             0.1132        0.1221     -0.0089   0.1522
+         payout_delay_days             1.1476        5.2477     -4.1001   0.0000
+       working_capital_gap           238.6020     2817.3978  -2578.7958   0.0000
+             lock_in_score             0.6873        0.5356      0.1517   0.0000
+ technology_adoption_score             0.7257        0.7019      0.0238   0.0000
+         advancement_score             0.5062        0.4797      0.0265   0.0000
+agentic_intelligence_score             0.4796        0.4633      0.0163   0.0005
+
+DELTA FRAMEWORK SUMMARY
+           dimension             primary_metric   mean  coverage
+                Data       payment_success_rate 0.9554       1.0
+    Embedded Finance           settlement_delay 1.5386       1.0
+             Lock-in              lock_in_score 0.5878       1.0
+          Technology  technology_adoption_score 0.7119       1.0
+         Advancement          advancement_score 0.4926       1.0
+Agentic Intelligence agentic_intelligence_score 0.4687       1.0
+Provenance dimensions present: Advancement, Agentic Intelligence, Data, Embedded Finance, Lock-in, Technology
+Missing DELTA dimensions in provenance: none
+Mapped provenance columns found: 55
+
+DELTA VARIABLE DETAIL
+          dataset                column_name      delta_dimension source_type  coverage  mean_or_rate           min          max  distinct
+    merchants.csv                merchant_id                 Data   synthetic    1.0000           NaN           NaN          NaN      1000
+    merchants.csv                     region                 Data      public    1.0000           NaN           NaN          NaN         4
+    merchants.csv                       city                 Data      public    1.0000           NaN           NaN          NaN        16
+    merchants.csv                   category                 Data      public    1.0000           NaN           NaN          NaN         5
+    merchants.csv                tenure_days                 Data   synthetic    1.0000  5.422580e+02  3.000000e+01 2.200000e+03       659
+    merchants.csv                 avg_ticket                 Data   synthetic    1.0000  1.108158e+03  2.500000e+02 2.787660e+03       993
+    merchants.csv             monthly_income                 Data   synthetic    1.0000  3.908246e+04  4.210800e+03 1.548747e+05      1000
+    merchants.csv       repeat_customer_rate              Lock-in   synthetic    1.0000  4.399000e-01  8.000000e-02 7.800000e-01       884
+    merchants.csv    platform_commission_pct     Embedded Finance      public    1.0000  2.199000e-01  1.200000e-01 3.200000e-01       701
+    merchants.csv                   kyc_flag     Embedded Finance   synthetic    1.0000  9.130000e-01  0.000000e+00 1.000000e+00         2
+    merchants.csv             treatment_flag     Embedded Finance    assigned    1.0000  4.560000e-01  0.000000e+00 1.000000e+00         2
+    merchants.csv      treatment_start_month     Embedded Finance    assigned    1.0000  2.277000e+00  0.000000e+00 8.000000e+00         8
+    merchants.csv     intervention_timestamp     Embedded Finance    assigned    0.4560           NaN           NaN          NaN         7
+    merchants.csv       payment_success_rate                 Data     derived    1.0000  9.554000e-01  8.824000e-01 1.000000e+00       609
+    merchants.csv       transaction_velocity                 Data     derived    1.0000  3.605170e+01  7.670000e+00 8.261000e+01       891
+    merchants.csv     multi_product_adoption     Embedded Finance     derived    1.0000  3.612000e+00  1.000000e+00 5.000000e+00         5
+    merchants.csv         digital_tool_usage           Technology     derived    1.0000  6.744000e-01  1.447000e-01 1.000000e+00       902
+    merchants.csv          ai_adoption_score Agentic Intelligence     derived    1.0000  5.312000e-01  6.810000e-02 9.281000e-01       903
+    merchants.csv           agent_usage_flag Agentic Intelligence     derived    1.0000  4.390000e-01  0.000000e+00 1.000000e+00         2
+ transactions.csv             transaction_id                 Data   synthetic    1.0000           NaN           NaN          NaN    403539
+ transactions.csv                merchant_id                 Data   synthetic    1.0000           NaN           NaN          NaN      1000
+ transactions.csv                  timestamp                 Data   synthetic    1.0000  1.719444e+18  1.704092e+18 1.735679e+18    224468
+ transactions.csv                     amount                 Data   synthetic    1.0000  1.158527e+03  1.500000e+02 5.000000e+03    165429
+ transactions.csv            customer_rating                 Data   synthetic    1.0000  4.352200e+00  2.460000e+00 5.000000e+00       243
+ transactions.csv             payment_method     Embedded Finance      public    1.0000           NaN           NaN          NaN         5
+ transactions.csv          cancellation_flag                 Data   synthetic    1.0000  5.590000e-02  0.000000e+00 1.000000e+00         2
+ transactions.csv                 tip_amount                 Data   synthetic    1.0000  1.370530e+01  0.000000e+00 5.696600e+02     18496
+ transactions.csv           treatment_active     Embedded Finance    assigned    1.0000  3.124000e-01  0.000000e+00 1.000000e+00         2
+ transactions.csv           settlement_delay     Embedded Finance     derived    1.0000  1.538600e+00  5.000000e-02 3.687000e+00      3399
+ transactions.csv    service_completion_rate          Advancement     derived    1.0000  9.545000e-01  8.919000e-01 1.000000e+00       989
+payouts_loans.csv                merchant_id                 Data   synthetic    1.0000           NaN           NaN          NaN      1000
+payouts_loans.csv                      month                 Data   synthetic    1.0000           NaN           NaN          NaN        12
+payouts_loans.csv              payout_amount     Embedded Finance   synthetic    1.0000  2.888508e+04  0.000000e+00 1.386248e+05     10842
+payouts_loans.csv          payout_delay_days     Embedded Finance   synthetic    0.9044  4.010100e+00  5.000000e-01 7.500000e+00       582
+payouts_loans.csv active_provider_month_flag                 Data     derived    1.0000  9.044000e-01  0.000000e+00 1.000000e+00         2
+payouts_loans.csv            loan_offer_flag     Embedded Finance   synthetic    1.0000  3.071000e-01  0.000000e+00 1.000000e+00         2
+payouts_loans.csv                loan_amount     Embedded Finance   synthetic    1.0000  1.672511e+03  0.000000e+00 5.293033e+04      1748
+payouts_loans.csv                loan_status     Embedded Finance   synthetic    1.0000           NaN           NaN          NaN         5
+payouts_loans.csv           repayment_amount     Embedded Finance   synthetic    1.0000  8.535393e+02  0.000000e+00 5.471940e+04      1821
+payouts_loans.csv        working_capital_gap     Embedded Finance     derived    1.0000  2.025806e+03  0.000000e+00 2.448735e+04      7258
+payouts_loans.csv        loan_disbursal_time     Embedded Finance     derived    1.0000  2.012000e-01  0.000000e+00 4.496000e+00      1165
+payouts_loans.csv               default_flag     Embedded Finance     derived    1.0000  7.800000e-03  0.000000e+00 1.000000e+00         2
+provider_kpis.csv                merchant_id                 Data   synthetic    1.0000           NaN           NaN          NaN      1000
+provider_kpis.csv                      month                 Data   synthetic    1.0000           NaN           NaN          NaN        12
+provider_kpis.csv          income_growth_pct          Advancement   synthetic    1.0000 -2.657000e-01 -1.000000e+00 8.071000e-01      5116
+provider_kpis.csv             monthly_profit          Advancement   synthetic    1.0000  1.412571e+04  0.000000e+00 6.638534e+04     10832
+provider_kpis.csv             retention_flag              Lock-in   synthetic    1.0000  8.885000e-01  0.000000e+00 1.000000e+00         2
+provider_kpis.csv          churn_probability              Lock-in   synthetic    1.0000  1.113000e-01  5.000000e-03 1.000000e+00       326
+provider_kpis.csv             treatment_flag     Embedded Finance    assigned    1.0000  4.560000e-01  0.000000e+00 1.000000e+00         2
+provider_kpis.csv        post_treatment_flag     Embedded Finance    assigned    1.0000  3.042000e-01  0.000000e+00 1.000000e+00         2
+provider_kpis.csv              lock_in_score              Lock-in     derived    1.0000  5.878000e-01  0.000000e+00 9.215000e-01      3516
+provider_kpis.csv  technology_adoption_score           Technology     derived    1.0000  7.119000e-01  2.347000e-01 1.000000e+00      1021
+provider_kpis.csv          advancement_score          Advancement     derived    1.0000  4.926000e-01  0.000000e+00 9.736000e-01      3244
+provider_kpis.csv agentic_intelligence_score Agentic Intelligence     derived    1.0000  4.687000e-01  3.750000e-02 9.474000e-01      1397
+provider_kpis.csv             forecast_usage Agentic Intelligence     derived    1.0000  2.670000e-01  0.000000e+00 1.000000e+00         2
+
+PLACEBO TEST
+Status=PASS; compared treated pre-period rows with control rows in the same calendar months.
+Status uses practical pre-period balance: PASS when all absolute standardized mean differences are below 0.10. P-values are still shown, but large synthetic panels can flag tiny differences as statistically significant.
+          outcome  treated_pre_mean  control_same_months_mean  placebo_difference  std_mean_diff  p_value
+income_growth_pct           -0.2413                   -0.2495              0.0082         0.0343   0.2249
+   monthly_profit        13674.5908                14423.3408           -748.7500        -0.0848   0.0029
+churn_probability            0.0692                    0.0789             -0.0097        -0.0437   0.1186
+
+DIFFERENCE-IN-DIFFERENCES READINESS
+Status=PASS
+                        criterion pass
+                  multiple_months True
+            treated_group_present True
+            control_group_present True
+       treated_pre_period_present True
+      treated_post_period_present True
+   control_counterfactual_present True
+panel_completeness_at_least_95pct True
+               panel_completeness  1.0
+For strongest DiD diagnostics, prefer --phased_rollout so treated providers have explicit pre-treatment months. A non-phased rollout can still support treatment/control contrasts, but it weakens pre-trend checks.
+
+END OF REPORT

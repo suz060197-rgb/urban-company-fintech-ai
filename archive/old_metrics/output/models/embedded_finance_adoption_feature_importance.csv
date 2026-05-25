@@ -1,0 +1,13 @@
+model,feature,coefficient,importance
+embedded_finance_adoption,kyc_flag,0.7553642473119329,0.7553642473119329
+embedded_finance_adoption,city_Hyderabad,-0.13763527253130378,0.13763527253130378
+embedded_finance_adoption,multi_product_adoption,0.12736545529263843,0.12736545529263843
+embedded_finance_adoption,city_Surat,0.1189111466101739,0.1189111466101739
+embedded_finance_adoption,city_Ahmedabad,-0.1129124581522479,0.1129124581522479
+embedded_finance_adoption,category_home_cleaning,0.10466841052266845,0.10466841052266845
+embedded_finance_adoption,agent_usage_flag,-0.09811280711198359,0.09811280711198359
+embedded_finance_adoption,monthly_income,-0.09365961013881163,0.09365961013881163
+embedded_finance_adoption,avg_ticket,-0.08722203589855622,0.08722203589855622
+embedded_finance_adoption,city_Kolkata,-0.08457730335115461,0.08457730335115461
+embedded_finance_adoption,city_Guwahati,0.0790891832526005,0.0790891832526005
+embedded_finance_adoption,category_appliance_repair,-0.06987893039949163,0.06987893039949163

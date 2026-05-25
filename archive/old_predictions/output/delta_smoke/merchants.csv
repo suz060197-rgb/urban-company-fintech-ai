@@ -1,0 +1,31 @@
+merchant_id,region,city,category,tenure_days,avg_ticket,monthly_income,repeat_customer_rate,platform_commission_pct,kyc_flag,payment_success_rate,transaction_velocity,multi_product_adoption,digital_tool_usage,ai_adoption_score,agent_usage_flag,treatment_flag,treatment_start_month
+UC00000001,North,Jaipur,appliance_repair,325,739.25,26577.04,0.4908,0.1538,True,0.9466,41.92,5,0.6439,0.5876,True,False,0
+UC00000002,South,Chennai,appliance_repair,426,667.23,11949.66,0.3603,0.152,True,0.957,18.06,3,0.6447,0.3682,False,False,0
+UC00000003,West,Mumbai,beauty_wellness,614,981.0,35964.66,0.4275,0.2197,True,0.9426,42.83,5,0.7641,0.7064,True,False,0
+UC00000004,South,Bengaluru,beauty_wellness,672,1368.7,51136.61,0.4948,0.2639,True,0.9695,46.82,5,0.8312,0.68,True,False,0
+UC00000005,North,Chandigarh,home_cleaning,469,1785.34,45557.41,0.4216,0.2323,True,0.976,26.36,5,0.8088,0.66,True,True,4
+UC00000006,South,Hyderabad,salon_spa_premium,831,1664.33,44283.16,0.3462,0.2742,True,0.9579,22.88,3,0.4724,0.4178,True,True,3
+UC00000007,North,Chandigarh,plumbing_electrical,309,984.29,43961.26,0.444,0.1796,True,0.9512,39.21,2,0.5398,0.5048,False,False,0
+UC00000008,North,Delhi NCR,beauty_wellness,996,718.87,30447.81,0.7015,0.2416,True,0.9335,49.64,4,0.5591,0.6603,False,False,0
+UC00000009,North,Delhi NCR,appliance_repair,391,890.31,36611.22,0.5153,0.1895,False,0.9183,44.22,1,0.322,0.1905,False,False,0
+UC00000010,East,Guwahati,beauty_wellness,797,1024.32,23353.79,0.4198,0.2118,True,0.9077,27.32,4,0.6317,0.5543,False,True,3
+UC00000011,North,Delhi NCR,appliance_repair,693,698.01,41341.61,0.6401,0.2532,True,0.9741,60.93,4,0.823,0.66,False,True,4
+UC00000012,West,Mumbai,salon_spa_premium,422,1747.91,56177.38,0.5088,0.2677,True,0.9465,30.84,3,0.7555,0.5074,False,False,0
+UC00000013,South,Hyderabad,beauty_wellness,480,744.41,36110.24,0.3599,0.2351,True,0.9378,46.81,3,0.7585,0.4964,False,False,0
+UC00000014,West,Surat,beauty_wellness,478,1461.6,25187.34,0.4875,0.2037,True,0.9839,18.64,5,0.8073,0.6433,True,False,0
+UC00000015,West,Surat,beauty_wellness,434,833.48,30777.53,0.3192,0.2491,True,0.9479,45.82,3,0.7717,0.5071,False,True,3
+UC00000016,North,Delhi NCR,salon_spa_premium,541,1434.99,29863.09,0.3458,0.2806,True,0.9099,18.8,5,0.7085,0.6769,True,False,0
+UC00000017,West,Ahmedabad,appliance_repair,582,668.68,13568.14,0.4236,0.1912,True,0.9862,19.64,4,0.9051,0.5864,False,True,3
+UC00000018,South,Chennai,salon_spa_premium,764,2005.39,58445.73,0.5911,0.2692,True,0.9643,30.63,3,0.9879,0.5328,False,True,2
+UC00000019,West,Surat,beauty_wellness,184,950.73,11922.8,0.4268,0.2559,True,0.9858,13.64,5,0.6536,0.5597,True,False,0
+UC00000020,West,Surat,salon_spa_premium,204,2280.86,84338.48,0.4368,0.248,True,0.987,38.34,2,0.5487,0.4903,False,False,0
+UC00000021,West,Pune,appliance_repair,362,609.5,26561.9,0.2924,0.2084,True,0.9698,40.78,4,0.7315,0.3299,True,True,2
+UC00000022,North,Delhi NCR,home_cleaning,278,2382.2,63416.9,0.4074,0.2189,True,1.0,27.26,3,0.7428,0.4573,False,True,4
+UC00000023,East,Kolkata,appliance_repair,240,813.61,52204.05,0.4957,0.2047,True,0.949,58.44,5,0.7103,0.687,True,False,0
+UC00000024,West,Pune,plumbing_electrical,258,585.51,5037.33,0.4653,0.1746,True,0.9542,8.64,5,0.7995,0.6172,True,True,3
+UC00000025,South,Bengaluru,salon_spa_premium,1119,864.88,33968.36,0.6006,0.2569,True,0.9621,40.81,3,0.5331,0.5496,True,False,0
+UC00000026,South,Kochi,beauty_wellness,470,1165.4,29643.51,0.6066,0.2375,True,0.9615,29.79,3,0.7382,0.488,False,True,3
+UC00000027,East,Guwahati,appliance_repair,304,1186.16,9623.11,0.3598,0.2108,True,0.9681,8.46,4,0.6894,0.7132,False,False,0
+UC00000028,South,Bengaluru,home_cleaning,409,1437.66,47716.31,0.4212,0.2068,True,0.9591,34.6,5,0.8741,0.7661,True,True,3
+UC00000029,West,Ahmedabad,appliance_repair,513,841.79,17740.75,0.3166,0.1684,True,1.0,19.05,3,0.6153,0.3031,False,True,3
+UC00000030,South,Kochi,beauty_wellness,329,717.59,37715.95,0.3414,0.2331,True,0.9436,49.49,4,0.5793,0.5895,False,True,3

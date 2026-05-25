@@ -1,0 +1,47 @@
+Model Training Summary
+
+churn_prediction
+- accuracy: 0.973
+- precision: 0.9584775086505191
+- recall: 0.8005780346820809
+- roc_auc: 0.9340095221086288
+- threshold: 0.37999999999999995
+- positive_rate: 0.11533333333333333
+- tp: 277
+- tn: 2642
+- fp: 12
+- fn: 69
+- top_features: payout_delay_days, forecast_usage, agentic_intelligence_score, post_treatment_flag, working_capital_gap
+
+loan_default_prediction
+- accuracy: 0.8728070175438597
+- precision: 0.10869565217391304
+- recall: 0.22727272727272727
+- roc_auc: 0.6829702555509007
+- threshold: 0.13
+- positive_rate: 0.04824561403508772
+- tp: 5
+- tn: 393
+- fp: 41
+- fn: 17
+- top_features: loan_disbursal_time, city_Hyderabad, treatment_flag, city_Bhubaneswar, avg_ticket
+
+income_growth_prediction
+- rmse: 0.10511536325634434
+- mae: 0.0778908328579132
+- r2: 0.8635121007596855
+- directional_accuracy: 0.903
+- top_features: payout_amount, monthly_income, active_provider_month_flag, lock_in_score, working_capital_gap
+
+embedded_finance_adoption
+- accuracy: 0.564
+- precision: 0.5369458128078818
+- recall: 0.8790322580645161
+- roc_auc: 0.604710701484895
+- threshold: 0.36999999999999994
+- positive_rate: 0.496
+- tp: 109
+- tn: 32
+- fp: 94
+- fn: 15
+- top_features: kyc_flag, city_Hyderabad, multi_product_adoption, city_Surat, city_Ahmedabad

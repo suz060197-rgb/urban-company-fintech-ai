@@ -1,0 +1,122 @@
+Urban Company Embedded Finance Synthetic Dataset Validation Report
+Data directory: D:\Project Files\urban_company_fintech_mba\output\delta_smoke
+
+ROW COUNTS
+- merchants: 30
+- transactions: 3,754
+- payouts_loans: 120
+- provider_kpis: 120
+- provenance: 58
+SCHEMA CHECKS
+- merchants.csv: PASS; rows=30; missing=none; extra=none, duplicate merchant_id rows=0
+- transactions.csv: PASS; rows=3,754; missing=none; extra=none, duplicate transaction_id rows=0
+- payouts_loans.csv: PASS; rows=120; missing=none; extra=none
+- provider_kpis.csv: PASS; rows=120; missing=none; extra=none
+- provenance.csv: PASS; rows=58; missing=none; extra=none
+Overall schema status: PASS
+
+DISTRIBUTION CHECKS
+                           check  share_valid status
+             avg_ticket_positive          1.0   PASS
+         monthly_income_positive          1.0   PASS
+              repeat_rate_in_0_1          1.0   PASS
+               commission_in_0_1          1.0   PASS
+     payment_success_rate_in_0_1          1.0   PASS
+       digital_tool_usage_in_0_1          1.0   PASS
+        ai_adoption_score_in_0_1          1.0   PASS
+   transaction_velocity_positive          1.0   PASS
+     transaction_amount_positive          1.0   PASS
+                   rating_in_1_5          1.0   PASS
+                 tip_nonnegative          1.0   PASS
+    settlement_delay_nonnegative          1.0   PASS
+  service_completion_rate_in_0_1          1.0   PASS
+              payout_nonnegative          1.0   PASS
+                loan_nonnegative          1.0   PASS
+ working_capital_gap_nonnegative          1.0   PASS
+ loan_disbursal_time_nonnegative          1.0   PASS
+        churn_probability_in_0_1          1.0   PASS
+            lock_in_score_in_0_1          1.0   PASS
+technology_adoption_score_in_0_1          1.0   PASS
+
+KEY DISTRIBUTION SUMMARY
+                    metric      mean       p05       p95
+                avg_ticket  1141.800   635.478  2156.898
+            monthly_income 35373.438 10657.970 61179.873
+        transaction_amount  1118.082   535.264  2374.882
+           customer_rating     4.355     3.686     5.000
+             payout_amount 25995.080     0.000 55344.174
+            monthly_profit 12668.834     0.000 26628.613
+         income_growth_pct    -0.261    -1.000     0.039
+      payment_success_rate     0.958     0.914     0.994
+        digital_tool_usage     0.698     0.500     0.891
+         ai_adoption_score     0.550     0.315     0.710
+          settlement_delay     1.709     0.187     3.122
+       working_capital_gap  2122.284     0.000  6212.370
+             lock_in_score     0.605     0.000     0.781
+ technology_adoption_score     0.733     0.583     0.874
+         advancement_score     0.500     0.000     0.673
+agentic_intelligence_score     0.468     0.167     0.824
+
+BALANCE TABLE
+Treatment providers=14; control providers=16; status=REVIEW
+              covariate  treated_mean  control_mean  std_mean_diff  p_value
+            tenure_days      513.5000      481.5625         0.1380   0.7061
+             avg_ticket     1172.8000     1114.6750         0.1120   0.7642
+         monthly_income    34654.2871    36002.6944        -0.0751   0.8382
+   repeat_customer_rate        0.4295        0.4660        -0.3535   0.3458
+platform_commission_pct        0.2235        0.2227         0.0208   0.9547
+   payment_success_rate        0.9644        0.9530         0.4910   0.1916
+     digital_tool_usage        0.7487        0.6544         0.7040   0.0655
+      ai_adoption_score        0.5335        0.5639        -0.2251   0.5423
+
+TREATMENT VS CONTROL COMPARISON
+ treatment_flag  post_treatment_flag  rows  income_growth_pct  monthly_profit  retention_rate  churn_probability  payout_delay_days  loan_offer_rate  working_capital_gap  default_rate  lock_in_score  technology_adoption_score  advancement_score  agentic_intelligence_score
+          False                False    64            -0.2638      13206.4320          0.9062             0.0820             4.9975           0.2188            2538.0734        0.0156         0.5750                     0.7092             0.4979                      0.5014
+           True                False    29            -0.2573      12641.1869          0.9310             0.0550             5.5018           0.2414            2863.5217        0.0000         0.5873                     0.7609             0.5042                      0.4453
+           True                 True    27            -0.2583      11424.2233          0.9259             0.0859             1.1284           0.3704             340.5626        0.0370         0.6961                     0.7582             0.5019                      0.4149
+
+POST-TREATMENT OUTCOME CONTRASTS
+                   outcome  treated_post_mean  control_mean  difference  p_value
+         income_growth_pct            -0.2583       -0.2638      0.0054   0.9300
+            monthly_profit         11424.2233    13206.4320  -1782.2087   0.2970
+         churn_probability             0.0859        0.0820      0.0039   0.9474
+         payout_delay_days             1.1284        4.9975     -3.8691   0.0000
+       working_capital_gap           340.5626     2538.0734  -2197.5108   0.0000
+             lock_in_score             0.6961        0.5750      0.1211   0.0092
+ technology_adoption_score             0.7582        0.7092      0.0490   0.0267
+         advancement_score             0.5019        0.4979      0.0039   0.9171
+agentic_intelligence_score             0.4149        0.5014     -0.0865   0.0796
+
+DELTA FRAMEWORK SUMMARY
+           dimension             primary_metric   mean  coverage
+                Data       payment_success_rate 0.9584       1.0
+    Embedded Finance           settlement_delay 1.7088       1.0
+             Lock-in              lock_in_score 0.6052       1.0
+          Technology  technology_adoption_score 0.7327       1.0
+         Advancement          advancement_score 0.5003       1.0
+Agentic Intelligence agentic_intelligence_score 0.4684       1.0
+Provenance dimensions present: Advancement, Agentic Intelligence, Data, Embedded Finance, Lock-in, Technology
+Missing DELTA dimensions in provenance: none
+Mapped provenance columns found: 53
+
+PLACEBO TEST
+Status=PASS; desirable result is no strong pre-period treatment effect.
+          outcome  treated_pre_mean  control_early_mean  placebo_difference  p_value
+income_growth_pct           -0.2573             -0.2564             -0.0009   0.9857
+   monthly_profit        12641.1869          13255.8221           -614.6352   0.7164
+churn_probability            0.0550              0.0617             -0.0067   0.8807
+
+DIFFERENCE-IN-DIFFERENCES READINESS
+Status=PASS
+                        criterion pass
+                  multiple_months True
+            treated_group_present True
+            control_group_present True
+       treated_pre_period_present True
+      treated_post_period_present True
+   control_counterfactual_present True
+panel_completeness_at_least_95pct True
+               panel_completeness  1.0
+For strongest DiD diagnostics, prefer --phased_rollout so treated providers have explicit pre-treatment months. A non-phased rollout can still support treatment/control contrasts, but it weakens pre-trend checks.
+
+END OF REPORT

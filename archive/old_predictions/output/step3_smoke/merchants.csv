@@ -1,0 +1,26 @@
+merchant_id,region,city,category,tenure_days,avg_ticket,monthly_income,repeat_customer_rate,platform_commission_pct,kyc_flag,treatment_flag,treatment_start_month
+UC00000001,South,Kochi,plumbing_electrical,237,521.5,20263.45,0.3571,0.1645,True,True,3
+UC00000002,North,Delhi NCR,home_cleaning,465,1019.85,31175.44,0.3027,0.174,True,True,3
+UC00000003,South,Bengaluru,beauty_wellness,416,926.1,31602.63,0.2732,0.2281,True,False,0
+UC00000004,South,Bengaluru,home_cleaning,464,1263.25,47215.1,0.4379,0.1894,True,False,0
+UC00000005,South,Bengaluru,appliance_repair,515,1270.09,46810.19,0.4447,0.2144,True,False,0
+UC00000006,South,Hyderabad,salon_spa_premium,1127,1777.19,46218.24,0.3865,0.2455,True,True,1
+UC00000007,North,Chandigarh,beauty_wellness,258,591.74,15281.66,0.5344,0.2572,True,True,2
+UC00000008,West,Mumbai,beauty_wellness,347,1131.1,39235.4,0.3071,0.2397,True,True,1
+UC00000009,North,Delhi NCR,salon_spa_premium,732,2099.81,61171.04,0.3322,0.2687,True,True,2
+UC00000010,East,Bhubaneswar,home_cleaning,531,1183.85,34554.86,0.4883,0.2156,True,False,0
+UC00000011,East,Kolkata,salon_spa_premium,449,1299.3,47326.48,0.5271,0.2648,True,False,0
+UC00000012,South,Hyderabad,plumbing_electrical,190,316.86,13232.66,0.4768,0.1589,True,True,2
+UC00000013,North,Chandigarh,home_cleaning,1129,1362.35,48101.81,0.6153,0.2064,True,True,1
+UC00000014,West,Surat,beauty_wellness,1023,1272.16,48478.7,0.461,0.226,True,False,0
+UC00000015,East,Kolkata,home_cleaning,149,1979.3,59385.94,0.4303,0.2552,True,True,3
+UC00000016,South,Bengaluru,salon_spa_premium,762,1727.15,38672.69,0.4107,0.2564,True,True,1
+UC00000017,South,Bengaluru,salon_spa_premium,578,1532.36,37677.76,0.414,0.2562,True,False,0
+UC00000018,North,Delhi NCR,appliance_repair,312,1049.4,40136.12,0.4689,0.2195,True,False,0
+UC00000019,South,Chennai,appliance_repair,170,953.73,48530.28,0.5473,0.1714,True,False,0
+UC00000020,West,Mumbai,appliance_repair,810,406.9,13385.08,0.4454,0.201,True,False,0
+UC00000021,West,Ahmedabad,appliance_repair,112,837.11,35913.7,0.3266,0.175,True,False,0
+UC00000022,East,Kolkata,beauty_wellness,596,729.66,31142.14,0.4448,0.2038,True,True,3
+UC00000023,North,Delhi NCR,beauty_wellness,385,1045.06,10523.88,0.2259,0.1587,True,False,0
+UC00000024,North,Lucknow,appliance_repair,227,883.1,27258.33,0.4091,0.2201,True,False,0
+UC00000025,North,Delhi NCR,plumbing_electrical,283,471.21,14907.89,0.279,0.223,True,True,2

@@ -1,0 +1,11 @@
+model,metric,before,after,delta
+loan_default_prediction,accuracy,0.8728070175438597,0.9274134119380988,0.05460639439423909
+loan_default_prediction,precision,0.108695652173913,0.06532663316582915,-0.04336901900808385
+loan_default_prediction,recall,0.2272727272727272,0.5416666666666666,0.31439393939393945
+loan_default_prediction,roc_auc,0.6829702555509007,0.9372831474597274,0.25431289190882667
+loan_default_prediction,threshold,0.13,0.8,0.67
+loan_default_prediction,positive_rate,0.0482456140350877,0.008843036109064112,-0.03940257792602359
+loan_default_prediction,tp,5.0,13.0,8.0
+loan_default_prediction,tn,393.0,2504.0,2111.0
+loan_default_prediction,fp,41.0,186.0,145.0
+loan_default_prediction,fn,17.0,11.0,-6.0
